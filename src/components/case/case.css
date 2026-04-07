@@ -1,0 +1,114 @@
+.legal_case {
+    max-width: 800px;
+    margin: 16px 8px 16px 8px;
+    padding: 8px;
+    border: 3px solid rgba(0,0,0, 0.15);
+    box-shadow: 8px 8px 10px rgba(0,0,0, 0.1);
+    border-radius: var(--border-radius);
+    background: var(--color-surface);
+}
+
+.header--tags {
+    margin: 4px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.definition--title {
+    font-weight: var(--font-light-bold);
+    color: var(--color-tertiary);
+}
+
+.header--tags .definition--description {
+    margin: 0 8px 12px 0;
+    font-weight: var(--font-medium-bold);
+}
+
+.legal_case--title {
+    margin: 0 12px 8px 12px;
+    padding: 0 0 16px 0;
+    text-align: left;
+    border-bottom: 3px solid rgba(0,0,0, 0.05);
+}
+
+.header--definitions {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 16px;
+}
+
+.dates .definition--title {
+    margin-right: 16px;
+}
+
+.definition--description {
+    font-weight: var(--font-light-bold);
+    text-align: start;
+}
+
+.politician {
+    flex: 1 1 100%;
+    margin-bottom: 8px;
+    font-size: 1.250rem;
+    font-weight: var(--font-medium-bold);
+}
+
+.definition--title.date {
+    flex: 0 0 auto;
+}
+
+.definition--description.date {
+    flex: 1 1 auto;
+}
+
+.description {
+    margin: 12px 12px;
+    padding: 24px 18px;
+    text-align: justify;
+    font-size: 1rem;
+    border-top: 3px solid rgba(0,0,0, 0.05);
+    border-bottom: 3px solid rgba(0,0,0, 0.05);
+}
+
+.source--list {
+    margin: 8px 0;
+    padding: 0 16px;
+}
+
+.legal-case--source {
+    display: block;
+    padding: 0 4px;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    overflow: hidden;
+    border: 2px solid var(--color-surface);
+    border-radius: var(--s-border-radius);
+    outline: none;
+}
+
+.legal-case--source:hover {
+    color: var(--color-primary);
+    background-color: rgba(2, 40, 89, 0.1);
+}
+
+.legal-case--source:focus {
+    border-color: var(--color-focus);
+}
+
+.grey-card {
+    border-left: 3px solid var(--color-neutral);
+}
+
+.yellow-card {
+    border-left: 3px solid var(--color-accent);
+}
+
+.red-card {
+    border-left: 3px solid var(--color-accent-variant);
+}

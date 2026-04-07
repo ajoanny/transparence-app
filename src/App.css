@@ -1,0 +1,17 @@
+.app--title {
+    font-size: 3rem;
+    margin: 1% auto;
+    text-align: center;
+}
+
+.search-bar {
+    width: 100%;
+}
+
+main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
