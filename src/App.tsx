@@ -1,39 +1,20 @@
-
 import './App.css'
-import TransparenceApi from "./data/transparence-api.ts";
-import {useEffect, useState} from "react";
-import type {LegalCase} from "./data/legal-case.ts";
-import Case from "./components/case";
-import SearchBar from "./components/search";
-
-const api = new TransparenceApi()
+import {Routes, Route} from "react-router-dom";
+import About from "./pages/about/about.tsx";
+import Cases from "./pages/cases/cases.tsx";
+import Header from "./components/header/header.tsx";
+import Notification from "./components/notification/notification.tsx";
 
 function App() {
-
-    const [legalCases, setLegalCases] = useState([] as LegalCase[])
-    const [search, setSearch] = useState<string>("")
-    const onSearch = (text: string) => {
-        console.log(`OnSearch APP /${text}/`)
-        setSearch(text)
-    }
-    useEffect(() => {
-        console.log("CALL API")
-        api.legalCases({ search, page: 1 })
-            .then(({ data }) => setLegalCases(data))
-            .catch(console.error)
-    },[search])
-
     return (
         <>
-            <header className="page-header">
-                <SearchBar onSearch={ onSearch }/>
-            </header>
+            <Header/>
+            <Notification/>
             <main>
-                {
-                    legalCases.map((legalCase, index) => {
-                        return <Case legalCase={legalCase} key={index}/>
-                    })
-                }
+                <Routes>
+                    <Route path="/" element={<Cases />} />
+                    <Route path="/a-propos" element={<About />} />
+                </Routes>
             </main>
         </>
     )

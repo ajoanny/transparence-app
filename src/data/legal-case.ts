@@ -6,8 +6,8 @@ type LegalCase = {
     title: string,
     description: string,
     status: string,
-    date: Date,
-    verdict_date: Date,
+    date: Date | null,
+    verdict_date: Date | null,
     party: Party,
     politician: {
         id: string,

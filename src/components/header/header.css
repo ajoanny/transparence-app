@@ -1,0 +1,120 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-bar {
+    width: 100%;
+}
+
+.nav-bar--menu {
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-bar--menu:hover {
+    width: 70px;
+    height: 70px;
+
+    background-color: rgba(2, 40, 89, 0.1);
+}
+
+.nav-bar--list {
+    position: fixed;
+    top: 70px;
+    display: none;
+
+    margin: 0;
+    padding: 0;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: left;
+
+    inset: 71px 0 0 0;
+    background-color: var(--color-bg);
+}
+
+.menu-open {
+    display: flex;
+}
+
+.nav-bar--list li {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.nav-bar--item {
+    display: flex;
+    flex: 1 1 95%;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-small);
+    font-weight: var(--font-light-bold);
+    border-radius: var(--s-border-radius);
+    text-decoration: none;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.nav-bar--item.active {
+    padding: var(--spacing-small);
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    border: 1px solid transparent;
+}
+
+.nav-bar--item:focus {
+    padding: var(--spacing-small);
+    border-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.nav-bar--item:hover {
+    padding: var(--spacing-small);
+    color: var(--color-text);
+    background-color:  var( --color-bg-alternative);
+    text-decoration: none;
+}
+
+@media (min-width: 600px) {
+
+    .nav-bar {
+        width: fit-content;
+    }
+
+    .nav-bar--menu {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .nav-bar--list {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin-left: var(--spacing-large);
+        top: 0;
+    }
+
+    .nav-bar--item {
+        margin-left: var( --spacing-xx-small);
+    }
+    .nav-bar--list li {
+        display: flex;
+        flex: 0 0 auto;
+    }
+}

@@ -1,9 +1,10 @@
 import type {LegalCase} from "../../data/legal-case.ts";
 import './case.css'
-import Source from "../source";
-import Status from "../status";
-import PartyTag from "../party-tag";
+import Source from "../source/source.tsx";
+import Status from "../status/status.tsx";
+import PartyTag from "../party-tag/party-tag.tsx";
 import {GREY_STATUS, RED_STATUS} from "../../data/status.ts";
+import { format} from "date-fns";
 
 function Case({legalCase }: {legalCase: LegalCase}) {
     return (
@@ -20,9 +21,9 @@ function Case({legalCase }: {legalCase: LegalCase}) {
                                 <dt className="definition--title sr-only">Politicien·ne</dt>
                                 <dd className="definition--description politician">{legalCase.politician.full_name}</dd>
                                 <dt className="definition--title date   ">Date de l'affaire</dt>
-                                <dd className="definition--description date">{legalCase.date ? legalCase.date.toString(): "-"}</dd>
+                                <dd className="definition--description date">{legalCase.date ? format(legalCase.date, "dd/MM/yyyy"): "-"}</dd>
                                 <dt className="definition--title date">Date du verdict</dt>
-                                <dd className="definition--description date">{legalCase.date ? legalCase.date.toString(): "-"}</dd>
+                                <dd className="definition--description date">{legalCase.verdict_date ? format(legalCase.verdict_date, "dd/MM/yyyy"): "-"}</dd>
                             </dl>
                         </header>
                         <p className="description">{legalCase.description}</p>

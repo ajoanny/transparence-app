@@ -1,0 +1,21 @@
+.cases--title {
+    margin: var(--spacing-medium)  var(--spacing-large) var(--spacing-x-small) var(--spacing-medium);
+    text-align: left;
+    max-width: var(--main-max-width);
+}
+
+.cases--sub-title {
+    margin: var(--spacing-x-small)  var(--spacing-large);
+    text-align: left;
+    font-size: var(--font-size-medium);
+    max-width: var(--main-max-width);
+}
+
+.pagination {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,11 +1,15 @@
 .legal_case {
-    max-width: 800px;
+    max-width: var(--main-max-width);
     margin: 16px 8px 16px 8px;
     padding: 8px;
-    border: 3px solid rgba(0,0,0, 0.15);
+    border: 1px solid rgba(0,0,0, 0.15);
     box-shadow: 8px 8px 10px rgba(0,0,0, 0.1);
-    border-radius: var(--border-radius);
-    background: var(--color-surface);
+    border-radius: var(--s-border-radius);
+    background: var(--color-bg);
+}
+
+.legal_case:last-of-type {
+    margin-bottom: 0;
 }
 
 .header--tags {
@@ -19,7 +23,7 @@
 
 .definition--title {
     font-weight: var(--font-light-bold);
-    color: var(--color-tertiary);
+    color: var(--color-text);
 }
 
 .header--tags .definition--description {
@@ -31,6 +35,7 @@
     margin: 0 12px 8px 12px;
     padding: 0 0 16px 0;
     text-align: left;
+    font-size: 2rem;
     border-bottom: 3px solid rgba(0,0,0, 0.05);
 }
 
@@ -84,10 +89,10 @@
 .legal-case--source {
     display: block;
     padding: 0 4px;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-size: 0.875rem;
     overflow: hidden;
-    border: 2px solid var(--color-surface);
+    border: 2px solid var(--color-bg);
     border-radius: var(--s-border-radius);
     outline: none;
 }
@@ -98,17 +103,35 @@
 }
 
 .legal-case--source:focus {
-    border-color: var(--color-focus);
+    border-color: var(--color-primary);
 }
 
 .grey-card {
-    border-left: 3px solid var(--color-neutral);
+    border-left: 5px solid var(--color-border);
 }
 
 .yellow-card {
-    border-left: 3px solid var(--color-accent);
+    border-left: 5px solid var(--yellow);
 }
 
 .red-card {
-    border-left: 3px solid var(--color-accent-variant);
+    border-left: 5px solid var(--red);
+}
+
+.footer--pagination {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.no-results {
+    margin: var(--spacing-x-large);
+    text-align: center;
+    font-size: var(--font-size-large);
+    color: var(--color-text-lighter);
+    font-weight: var(--font-medium-bold);
 }

@@ -1,0 +1,48 @@
+.notifications-list {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    margin: 0;
+    z-index: 1;
+    top: 71px;
+    right: 0;
+    justify-content: center;
+}
+
+.notifications-list:has(li) {
+    display: flex
+}
+
+button.notification {
+    display: flex;
+    align-items: center;
+    margin: var( --spacing-xx-small) var( --spacing-large);
+    padding: var( --spacing-small) var( --spacing-small) var( --spacing-small) var( --spacing-medium);
+    font-weight: var(--font-medium-bold);
+    border-radius: var(--s-border-radius);
+    box-shadow: 8px 8px 10px rgba(0,0,0, 0.1);
+    background-color: #A21814;
+    border: 1px solid #A21814;
+}
+
+.message {
+    color: var(--color-bg);
+}
+
+button.notification:hover {
+   background-color: #911913;
+   border: 1px solid #911913;
+}
+
+button.notification:active {
+   background-color: #801912;
+   border: 1px solid #801912;
+}
+
+button.notification svg {
+    position: relative;
+    bottom: 10px;
+    left: 6px;
+    width: 14px;
+    height: 14px;
+}
