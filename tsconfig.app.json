@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@api/*": ["src/data/*"]
+      "@api/*": ["./src/data/*"]
     }
   },
   "include": ["src", "tests"]
