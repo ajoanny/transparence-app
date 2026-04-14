@@ -8,8 +8,8 @@
     background-color: var(--color-bg-alternative);
     border: 1px solid var(--color-border);
     border-radius: var(--s-border-radius);
+    min-width: 100px;
 }
-
 @media (min-width: 600px) {
     .search-field {
         max-width: 600px;
@@ -18,6 +18,7 @@
 
 .search-input {
     flex: 1 1 auto;
+    min-width: 0;
     padding: 0 4px;
     outline: none;
     border: none;
