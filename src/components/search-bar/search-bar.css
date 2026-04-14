@@ -1,5 +1,5 @@
 .search-field {
-    min-width: 260px;
+    flex: 1 1 auto;
     margin: var(--spacing-medium) var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
     height: 40px;
     display: flex;
