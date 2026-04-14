@@ -14,7 +14,7 @@ describe('Header', () => {
 
     it('display menu', async () => {
         render(<MemoryRouter><Header /></MemoryRouter>);
-        const menu = screen.getByText('AAA');
+        const menu = screen.getByLabelText('Ouvrir le menu');
         const caseLink = screen.getByText('Affaires');
         const aboutLink = screen.getByText('À propos');
 
